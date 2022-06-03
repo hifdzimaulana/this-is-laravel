@@ -1,14 +1,13 @@
 @extends('layouts.main')
 
 @section('page-title')
-    Home
+    Articles
 @endsection
 
 @section('title')
-    Home Page
+    Kabar terbaru hari ini
 @endsection
 
 @section('content')
-    <p>ini adalah variable <span id="greeting">greeting</span> </p>
-    <p> {{ $greeting }}</p>
+    {{ $content }}
 @endsection

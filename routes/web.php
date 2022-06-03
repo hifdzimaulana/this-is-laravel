@@ -18,3 +18,7 @@ Route::get('/', function () {
         "greeting" => "Selamat datang!"
     ]);
 });
+
+Route::get('/blog', function () {
+    return view('blog', ["content" => "inilah isi halaman blog."]);
+});
