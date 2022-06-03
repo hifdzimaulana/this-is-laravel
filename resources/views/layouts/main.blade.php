@@ -12,7 +12,13 @@
 
 <body>
     <header>
-        <h1 style="color: grey">anggap ini header</h1>
+
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="container">

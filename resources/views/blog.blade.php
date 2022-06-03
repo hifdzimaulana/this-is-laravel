@@ -9,5 +9,9 @@
 @endsection
 
 @section('content')
-    {{ $content }}
+    @foreach ($articles as $item)
+        <h3>{{ $item['title'] }}</h3>
+        <img src="{{ $item['img_url'] }}" alt="{{ $item['title'] }}">
+        <p>{{ $item['content'] }}</p>
+    @endforeach
 @endsection
