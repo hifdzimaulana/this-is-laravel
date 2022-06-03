@@ -36,3 +36,7 @@ Route::get('/blog', function () {
 
     return view('blog', ["articles" => $articles]);
 });
+
+Route::get('user/{nama}', function ($nama) {
+    return "selamat datang, $nama!";
+});
