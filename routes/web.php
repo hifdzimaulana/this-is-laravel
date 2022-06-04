@@ -28,7 +28,7 @@ Route::get('/blog', function () {
         "articles" => Article::all()
     ]);
 });
-Route::get('/users', function ($nama) {
+Route::get('/users', function () {
     return User::all();
 });
 
