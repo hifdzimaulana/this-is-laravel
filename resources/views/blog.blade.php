@@ -10,8 +10,10 @@
 
 @section('content')
     @foreach ($articles as $item)
-        <h3>{{ $item['title'] }}</h3>
-        <img src="{{ $item['img_url'] }}" alt="{{ $item['title'] }}">
-        <p>{{ $item['content'] }}</p>
+        @include('partials.article', [
+            'title' => $item['title'],
+            'img_url' => $item['img_url'],
+            'content' => $item['content'],
+        ])
     @endforeach
 @endsection
