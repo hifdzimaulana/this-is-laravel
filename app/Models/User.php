@@ -36,9 +36,8 @@ class User
         foreach (self::$users as $key => $value) {
             if ($id == $value['id']) {
                 return $value;
-            } else {
-                return response(["status" => 404, "message" => "Not found"], 404);
             }
         }
+        return response(["status" => 404, "message" => "Not found"], 404);
     }
 }
