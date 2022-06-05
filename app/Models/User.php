@@ -20,24 +20,20 @@ class User
         ],
         [
             "id" => 3,
-            "name" => "Mozzanine Manna",
+            "name" => "Yaya Tourre",
             "age" => 18,
-            "gender" => "F"
+            "gender" => "M"
         ],
     ];
 
     public static function all()
     {
-        return self::$users;
+        return collect(self::$users);
     }
 
     public static function find($id)
     {
-        foreach (self::$users as $key => $value) {
-            if ($id == $value['id']) {
-                return $value;
-            }
-        }
-        return response(["status" => 404, "message" => "Not found"], 404);
+        $result = collect(self::all())->firstWhere('id', '==', $id);
+        return $result ? $result : response(["status" => 404, "message" => "Not found"], 404);
     }
 }
