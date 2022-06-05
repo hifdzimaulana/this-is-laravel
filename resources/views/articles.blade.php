@@ -12,8 +12,9 @@
     @foreach ($articles as $item)
         @include('partials.article', [
             'title' => $item['title'],
-            'img_url' => $item['img_url'],
-            'content' => $item['content'],
+            'url' => $item['url'],
+            'img_url' => $item['urlToImage'],
+            'content' => $item['description'],
         ])
     @endforeach
 @endsection

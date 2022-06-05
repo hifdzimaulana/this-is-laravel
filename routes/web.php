@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Article;
-use App\Models\User;
+use App\Http\Controllers\Article as ControllersArticle;
+use App\Http\Controllers\User as ControllersUser;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,16 +22,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/blog', function () {
-
-    return view('blog', [
-        "articles" => Article::all()
-    ]);
-});
-Route::get('/users', function () {
-    return User::all();
-});
-
-Route::get('/users/{id}', function ($id) {
-    return User::find($id);
-});
+Route::get('/articles', [ControllersArticle::class, 'index']); // 'index' is the name of the method in Controller class.
+Route::get('/users', [ControllersUser::class, 'index']);
+Route::get('/users/{id}', [ControllersUser::class, 'searchById']);
