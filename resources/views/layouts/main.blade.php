@@ -12,13 +12,7 @@
 
 <body>
     <header>
-
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
+        @include('partials.navbar')
     </header>
 
     <div class="container">
