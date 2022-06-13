@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('home', [
         "greeting" => "Selamat datang!"
     ]);
-});
+})->name('home');
 
 
-Route::get('/articles', [ControllersArticle::class, 'index']); // 'index' is the name of the method in Controller class.
-Route::get('/users', [ControllersUser::class, 'index']);
+Route::get('/articles', [ControllersArticle::class, 'index'])->name('articles'); // 'index' is the name of the method in Controller class.
+Route::get('/users', [ControllersUser::class, 'index'])->name('users');
 Route::get('/users/{id}', [ControllersUser::class, 'searchById']);
